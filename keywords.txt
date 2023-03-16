@@ -1,10 +1,10 @@
 #######################################
-# Syntax Coloring Map For ESP32 BLE Keyboard
+# Syntax Coloring Map For ESP32 BLE Combo
 #######################################
 # Class
 #######################################
 
-BleKeyboard	KEYWORD1
+BLECombo	KEYWORD1
 
 #######################################
 # Methods and Functions
@@ -12,12 +12,27 @@ BleKeyboard	KEYWORD1
 
 begin	KEYWORD2
 end	KEYWORD2
-write	KEYWORD2
-press	KEYWORD2
-release	KEYWORD2
-releaseAll	KEYWORD2
-setBatteryLevel	KEYWORD2
 isConnected	KEYWORD2
+setBatteryLevel	KEYWORD2
+setName	KEYWORD2
+setDelay	KEYWORD2
+setVendorId	KEYWORD2
+setProductId	KEYWORD2
+setVersion	KEYWORD2
+keyPress	KEYWORD2
+keyPress	KEYWORD2
+keyRelease	KEYWORD2
+keyRelease	KEYWORD2
+write	KEYWORD2
+write	KEYWORD2
+write	KEYWORD2
+keyReleaseAll	KEYWORD2
+getKeyLedStatus	KEYWORD2
+mouseClick	KEYWORD2
+mouseMove	KEYWORD2
+mousePress	KEYWORD2
+mouseRelease	KEYWORD2
+isMousePressed	KEYWORD2
 
 #######################################
 # Constants

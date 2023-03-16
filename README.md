@@ -112,49 +112,6 @@ By default the battery level will be set to 100%, the device name will be `ESP32
 There is also a `setDelay` method to set a delay between each key event. E.g. `bleKeyboard.setDelay(10)` (10 milliseconds). The default is `8`.  
 This feature is meant to compensate for some applications and devices that can't handle fast input and will skip letters if too many keys are sent in a small time frame.  
 
-## NimBLE-Mode
-The NimBLE mode enables a significant saving of RAM and FLASH memory.
-
-### Comparison (SendKeyStrokes.ino at compile-time)
-
-**Standard**
-```
-RAM:   [=         ]   9.3% (used 30548 bytes from 327680 bytes)
-Flash: [========  ]  75.8% (used 994120 bytes from 1310720 bytes)
-```
-
-**NimBLE mode**
-```
-RAM:   [=         ]   8.3% (used 27180 bytes from 327680 bytes)
-Flash: [====      ]  44.2% (used 579158 bytes from 1310720 bytes)
-```
-
-### Comparison (SendKeyStrokes.ino at run-time)
-
-|   | Standard | NimBLE mode | difference
-|---|--:|--:|--:|
-| `ESP.getHeapSize()`   | 296.804 | 321.252 | **+ 24.448**  |
-| `ESP.getFreeHeap()`   | 143.572 | 260.764 | **+ 117.192** |
-| `ESP.getSketchSize()` | 994.224 | 579.264 | **- 414.960** |
-
-## How to activate NimBLE mode?
-
-### ArduinoIDE: 
-Uncomment the first line in BleKeyboard.h
-```C++
-#define USE_NIMBLE
-```
-
-### PlatformIO:
-Change your `platformio.ini` to the following settings
-```ini
-lib_deps = 
-  NimBLE-Arduino
-
-build_flags = 
-  -D USE_NIMBLE
-```
-
 ## Credits
 
 Credits to [chegewara](https://github.com/chegewara) and [the authors of the USB keyboard library](https://github.com/arduino-libraries/Keyboard/) as this project is heavily based on their work!  
