@@ -19,7 +19,6 @@ void BLECombo::mouseNotify(uint8_t len, uint8_t* buf)
 {
     _inputMouse->setValue(buf, len);
     _inputMouse->notify();
-    this->delayMillis(_delay_ms);
 }
 
 void BLECombo::mouseClick(uint8_t b)

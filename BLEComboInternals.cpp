@@ -21,7 +21,6 @@ void BLECombo::sendReport(keyreport_t* keys)
         return;
     _inputKeyboard->setValue((uint8_t*)keys, sizeof(keyreport_t));
     _inputKeyboard->notify();
-    this->delayMillis(_delay_ms);
 }
 
 void BLECombo::sendReport(MediaKeyReport* keys)
@@ -30,7 +29,6 @@ void BLECombo::sendReport(MediaKeyReport* keys)
         return;
     _inputMediaKeys->setValue((uint8_t*)keys, sizeof(MediaKeyReport));
     _inputMediaKeys->notify();
-    this->delayMillis(_delay_ms);
 }
 
 void BLECombo::setButtons(uint8_t b)
