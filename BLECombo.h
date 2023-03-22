@@ -84,6 +84,7 @@ public:
     size_t write(const uint8_t* buffer, size_t size);
     void keyReleaseAll(void);
     bool getKeyLedStatus(uint8_t led);
+    uint8_t getKeyLedValue(void);
     // mouse
     void mouseClick(uint8_t b = MOUSE_LEFT);
     void mouseMove(signed char x, signed char y, signed char wheel = 0, signed char hWheel = 0);
@@ -92,6 +93,7 @@ public:
     bool isMousePressed(uint8_t b = MOUSE_LEFT); // check LEFT by default
 
 protected:
+    void mouseNotify(uint8_t len, uint8_t* buf);
     void sendReport(keyreport_t* keys);
     void sendReport(MediaKeyReport* keys);
     virtual void onStarted(NimBLEServer* pServer);

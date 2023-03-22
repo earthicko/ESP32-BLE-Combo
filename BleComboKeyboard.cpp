@@ -144,6 +144,11 @@ bool BLECombo::getKeyLedStatus(uint8_t led)
     return (_keyboardLedsStatus & led) != 0;
 }
 
+uint8_t BLECombo::getKeyLedValue(void)
+{
+    return _keyboardLedsStatus;
+}
+
 size_t BLECombo::write(uint8_t c)
 {
     uint8_t p = keyPress(c); // Keydown
