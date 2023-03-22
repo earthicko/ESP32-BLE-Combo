@@ -50,8 +50,6 @@ private:
     // internals
     void delayMillis(uint64_t ms);
     void setButtons(uint8_t b);
-    void sendReport(keyreport_t* keys);
-    void sendReport(MediaKeyReport* keys);
 
     uint16_t _vid = 0x05ac;
     uint16_t _pid = 0x820a;
@@ -94,6 +92,8 @@ public:
     bool isMousePressed(uint8_t b = MOUSE_LEFT); // check LEFT by default
 
 protected:
+    void sendReport(keyreport_t* keys);
+    void sendReport(MediaKeyReport* keys);
     virtual void onStarted(NimBLEServer* pServer);
     virtual void onConnect(NimBLEServer* pServer) override;
     virtual void onDisconnect(NimBLEServer* pServer) override;
