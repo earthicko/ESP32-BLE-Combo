@@ -25,6 +25,7 @@ void BLECombo::mouseClick(uint8_t b)
 {
     _buttons = b;
     this->mouseMove(0, 0, 0, 0);
+    this->delayMillis(_delay_ms);
     _buttons = 0;
     this->mouseMove(0, 0, 0, 0);
 }
