@@ -25,6 +25,8 @@ void BLECombo::setBatteryLevel(uint8_t level)
     _batteryLevel = level;
     if (_hid)
         _hid->setBatteryLevel(_batteryLevel);
+    if (_hidMouse)
+        _hidMouse->setBatteryLevel(_batteryLevel);
 }
 
 // must be called before begin in order to set the name
