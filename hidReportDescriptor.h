@@ -14,4 +14,4 @@
 extern const uint8_t hidReportDescriptorKeyboard[N_ELEM_KEYBOARD];
 extern const uint8_t hidReportDescriptorMouse[N_ELEM_MOUSE];
 
-#endif;
+#endif
